@@ -5,6 +5,14 @@ using namespace std;
 // static 共享变量
 static int count = 10;
 
+struct Books
+{
+    /* data */
+    string title;
+    string name;
+    int price;
+};
+
 int main()
 {
     // 字符串操作
@@ -37,22 +45,38 @@ int main()
     // 函数
     int aa = 100;
     int bb = 200;
-    int result = max(aa,bb);
+    int result = max(aa, bb);
     cout << "Max value is : " << result << endl;
 
+    // 数组
+    int n[10];
+    for (int i = 0; i < 10; i++)
+    {
+        n[i] = i + 100;
+    }
+    cout << n[0] << endl;
 
+    // 指针
+
+    // 结构体
+
+    Books book = {"平凡的世界", "一本好书", 9};
+
+    cout << "第一本书标题 : " << book.name << endl;
+    cout << "第一本书作者 : " << book.title << endl;
+    cout << "第一本书类目 : " << book.price << endl;
 }
 
 // 函数返回两个数中较大的那个数
-int max(int num1, int num2) 
+int max(int num1, int num2)
 {
-   // 局部变量声明
-   int result;
- 
-   if (num1 > num2)
-      result = num1;
-   else
-      result = num2;
- 
-   return result; 
+    // 局部变量声明
+    int result;
+
+    if (num1 > num2)
+        result = num1;
+    else
+        result = num2;
+
+    return result;
 }
